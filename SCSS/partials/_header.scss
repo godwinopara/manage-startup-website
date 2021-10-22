@@ -1,0 +1,45 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 0;
+
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    .hamburger-menu {
+      display: none;
+    }
+    .show-nav {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    .logo {
+      flex: 1;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 2;
+
+      .nav_links {
+        display: flex;
+        justify-content: space-between;
+
+        li:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+}

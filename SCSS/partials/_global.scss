@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,400;0,700;0,800;1,500&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Be Vietnam", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: $Dark-Blue;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  color: $Dark-Grayish-Blue;
+}
+
+h1,
+h2,
+h3 {
+  color: $Dark-Blue;
+  font-weight: 800;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  border: none;
+  text-align: center;
+  font-weight: 700;
+  background: $Bright-Red;
+  color: $Very-Light-Gray;
+  box-shadow: 0px 4px 5px -2px rgb(255, 240, 235);
+  -webkit-box-shadow: 0px 4px 5px -2px rgb(255, 240, 235);
+  -moz-box-shadow: 0px 4px 5px -2px rgb(255, 240, 235);
+  &.button_white {
+    background: $Very-Light-Gray;
+    color: $Bright-Red;
+    box-shadow: none;
+  }
+  &.footer-btn {
+    box-shadow: none;
+  }
+}
+
+.container {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  p {
+    font-size: 1.6rem;
+  }
+}

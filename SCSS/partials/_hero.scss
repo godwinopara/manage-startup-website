@@ -1,0 +1,62 @@
+.hero {
+  margin-bottom: 10rem;
+  &_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_text {
+    margin: auto;
+    text-align: center;
+    order: 2;
+    h1 {
+      font-size: 3.6rem;
+      font-weight: 800;
+      line-height: 1.5;
+      padding: 3rem 0 1rem;
+    }
+
+    button {
+      margin-top: 4rem;
+    }
+  }
+
+  &_img {
+    order: 1;
+    display: block;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    &_container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &_text {
+      order: 1;
+      flex: 1;
+      text-align: left;
+      margin: 0;
+
+      h1 {
+        margin: 2rem 0;
+        font-size: 5rem;
+        line-height: 1.2;
+      }
+
+      p {
+        width: 67%;
+        font-size: 1.8rem;
+      }
+    }
+
+    &_img {
+      order: 2;
+      flex: 1;
+      text-align: right;
+    }
+  }
+}
