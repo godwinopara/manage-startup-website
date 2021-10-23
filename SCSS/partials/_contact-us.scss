@@ -12,3 +12,23 @@
     margin-bottom: 3rem;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .contact-us div {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  h2 {
+    flex: 1;
+  }
+
+  .contact_us_btn {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

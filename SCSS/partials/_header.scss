@@ -4,6 +4,11 @@ header {
   justify-content: space-between;
   padding: 4rem 0;
 
+  .logo {
+    display: flex;
+    align-self: center;
+  }
+
   nav {
     display: none;
   }
@@ -36,6 +41,10 @@ header {
         li:not(:last-child) {
           margin-right: 3rem;
         }
+      }
+
+      .nav_links li:hover {
+        opacity: 0.3;
       }
     }
     .hamburger {

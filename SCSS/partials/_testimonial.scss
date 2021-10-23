@@ -2,7 +2,6 @@
   h2 {
     text-align: center;
     font-size: 3.2rem;
-    // margin-bottom: 1rem;
   }
 
   &_card {
@@ -14,12 +13,14 @@
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    scroll-snap-align: start;
 
     &::-webkit-scrollbar {
       display: none;
       background: none;
     }
 
+    cursor: pointer;
     .card {
       background: $Very-Light-Gray;
       text-align: center;
@@ -62,6 +63,7 @@
       width: 10px;
       border: 1px solid $Bright-Red;
       border-radius: 50%;
+      cursor: pointer;
     }
 
     .dot:not(:last-child) {
@@ -71,6 +73,8 @@
 
   .btn {
     text-align: center;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -89,10 +93,7 @@
     }
 
     &_card {
-      grid-template-columns: repeat(4, 35vw);
-    }
-    .dots {
-      visibility: hidden;
+      grid-template-columns: repeat(4, 30vw);
     }
   }
 }
