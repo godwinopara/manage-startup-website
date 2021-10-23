@@ -3,17 +3,53 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 4rem 0;
+  position: relative;
 
   .logo {
     display: flex;
     align-self: center;
+    height: 2rem;
+    flex: 1;
+    z-index: 1;
   }
 
   nav {
     display: none;
   }
 
+  nav.show-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    inset: 0;
+    top: 20%;
+    background: #fff;
+    height: 60vh;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
+    border-radius: 5px;
+
+    li {
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 1.8rem;
+    }
+
+    button {
+      display: none;
+    }
+  }
+
   .hamburger {
+    z-index: 10;
     .hamburger-menu {
       display: none;
     }
@@ -21,6 +57,22 @@ header {
       display: block;
     }
   }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: -6%;
+  height: 100vh;
+  width: 100vw;
+  background: #737373;
+  opacity: 0.5;
+  z-index: -1;
+  display: none;
+}
+
+.overlay.display-overlay {
+  display: block;
 }
 
 @media screen and (min-width: 1024px) {
