@@ -2,18 +2,29 @@
   h2 {
     text-align: center;
     font-size: 3.2rem;
-    margin-bottom: 8rem;
+    // margin-bottom: 1rem;
   }
 
   &_card {
-    margin-top: 5rem;
+    margin-top: 3rem;
     padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 90vw);
+    grid-gap: 3rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+      background: none;
+    }
 
     .card {
       background: $Very-Light-Gray;
       text-align: center;
       padding: 5rem 1.5rem;
-      margin: 5rem 0;
+      margin: 5rem 0 2rem;
       position: relative;
       width: 100%;
 
@@ -34,14 +45,40 @@
         margin: auto;
       }
     }
+  }
 
-    .card:not(:first-child) {
-      display: none;
+  .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+
+    .active {
+      background: $Bright-Red;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      border: 1px solid $Bright-Red;
+      border-radius: 50%;
+    }
+
+    .dot:not(:last-child) {
+      margin-right: 1rem;
     }
   }
 
   .btn {
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials {
+    &_card {
+      grid-template-columns: repeat(4, 50vw);
+    }
   }
 }
 
@@ -52,24 +89,10 @@
     }
 
     &_card {
-      display: grid;
       grid-template-columns: repeat(4, 35vw);
-      grid-gap: 3rem;
-      overflow-x: scroll;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-
-      .card {
-      }
-
-      .card:not(:first-child) {
-        display: block;
-      }
-
-      &::-webkit-scrollbar {
-        display: none;
-        background: none;
-      }
+    }
+    .dots {
+      visibility: hidden;
     }
   }
 }
