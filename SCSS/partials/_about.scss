@@ -45,6 +45,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: start;
+    margin-bottom: 10rem;
 
     &_heading {
       text-align: left;

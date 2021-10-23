@@ -7,6 +7,7 @@
 
   &_card {
     margin-top: 5rem;
+    padding: 0 2rem;
 
     .card {
       background: $Very-Light-Gray;
@@ -25,7 +26,12 @@
         width: 7rem;
         position: absolute;
         top: -3rem;
-        right: 40%;
+        transform: translateX(-50%);
+      }
+
+      p {
+        max-width: 95%;
+        margin: auto;
       }
     }
 
@@ -36,5 +42,34 @@
 
   .btn {
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .testimonials {
+    h2 {
+      font-size: 3.5rem;
+    }
+
+    &_card {
+      display: grid;
+      grid-template-columns: repeat(4, 35vw);
+      grid-gap: 3rem;
+      overflow-x: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      .card {
+      }
+
+      .card:not(:first-child) {
+        display: block;
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+        background: none;
+      }
+    }
   }
 }
