@@ -14,7 +14,7 @@ hamburger.addEventListener("click", () => {
     hamburgerOpen.classList.remove("show-nav");
     nav.classList.add("show-nav");
     overlay.classList.add("display-overlay");
-    document.documentElement.style.overflowY = "hidden";
+    document.documentElement.style.overflow = "hidden";
   } else {
     hamburgerOpen.classList.add("show-nav");
     hamburgerClose.classList.remove("show-nav");

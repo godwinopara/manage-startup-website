@@ -3,8 +3,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 4rem 0;
-  position: relative;
-
+  overflow: hidden;
   .logo {
     display: flex;
     align-self: center;
@@ -25,9 +24,9 @@ header {
     text-align: center;
     position: fixed;
     inset: 0;
-    top: 20%;
+    top: 15%;
     background: #fff;
-    height: 60vh;
+    height: 50vh;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -50,6 +49,7 @@ header {
 
   .hamburger {
     z-index: 10;
+    cursor: pointer;
     .hamburger-menu {
       display: none;
     }
@@ -57,22 +57,21 @@ header {
       display: block;
     }
   }
-}
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: -6%;
-  height: 100vh;
-  width: 100vw;
-  background: #737373;
-  opacity: 0.5;
-  z-index: -1;
-  display: none;
-}
+  .overlay {
+    position: absolute;
+    inset: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #737373;
+    opacity: 0.5;
+    z-index: -1;
+    display: none;
+  }
 
-.overlay.display-overlay {
-  display: block;
+  .overlay.display-overlay {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1024px) {
